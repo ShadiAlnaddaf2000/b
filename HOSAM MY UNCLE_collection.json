@@ -1,0 +1,1645 @@
+{
+	"info": {
+		"_postman_id": "53b0e710-3f82-4eb0-81f1-559003c42fa1",
+		"name": "tourism",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "24790231"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTQ2NTM1MDksImV4cCI6MTcxNDY1NzEwOSwibmJmIjoxNzE0NjUzNTA5LCJqdGkiOiJHVnVnZkRzWHJkcnpwbUVnIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.KDBVkBgkAAElqZ7jeKdcLtaOlYb4C8aC5tm4bSQrDiE"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "homam"
+								},
+								{
+									"key": "last_name",
+									"value": "nasser"
+								},
+								{
+									"key": "email",
+									"value": "homam.naser.3@gmail.com"
+								},
+								{
+									"key": "password",
+									"value": "123456789"
+								},
+								{
+									"key": "confirmed-password",
+									"value": "123456789"
+								},
+								{
+									"key": "address",
+									"value": "damascus"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							],
+							"query": [
+								{
+									"key": "first_name",
+									"value": "homam",
+									"disabled": true
+								},
+								{
+									"key": "last_name",
+									"value": "nasser",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "homam.naser.3@gmail.com",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "123456789",
+									"disabled": true
+								},
+								{
+									"key": "confirmed-password",
+									"value": "123456789",
+									"disabled": true
+								},
+								{
+									"key": "address",
+									"value": "damascus",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "homam.naser.3@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456789",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/auth/login"
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTUwMDgyMDYsImV4cCI6MTcxNTAxMTgwNiwibmJmIjoxNzE1MDA4MjA2LCJqdGkiOiJaQmdCSE53VDVjS1ppVkVRIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.E-iskjjNXrebWD2Q6v2tS4v7ACA1IyoXG8lA08tU9Cc"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/auth/logout"
+					},
+					"response": []
+				},
+				{
+					"name": "user profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTkzMTY5NDEsImV4cCI6MTcxOTMyMDU0MSwibmJmIjoxNzE5MzE2OTQxLCJqdGkiOiJBQ2ZRTEhIaHhtZlE4SVZWIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.EY3AzYJISD_rwtShkDs-HqqIjVCOZeZ0OeYM4vdXDEA"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/auth/user-profile"
+					},
+					"response": []
+				},
+				{
+					"name": "email_verification",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTQ2NTM1MDksImV4cCI6MTcxNDY1NzEwOSwibmJmIjoxNzE0NjUzNTA5LCJqdGkiOiJHVnVnZkRzWHJkcnpwbUVnIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.KDBVkBgkAAElqZ7jeKdcLtaOlYb4C8aC5tm4bSQrDiE"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "homam.naser.3@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "otp",
+									"value": "370593\n",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/auth/email_verification"
+					},
+					"response": []
+				},
+				{
+					"name": "get email verification",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTQ5MTQ3NjEsImV4cCI6MTcxNDkxODM2MSwibmJmIjoxNzE0OTE0NzYxLCJqdGkiOiI4UXo0aVhienlORFUwUDhmIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.VclISRsXODZb9uR7FyWy4bDdFXqpjUUSipEDDIkRMd"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/auth/email_verification"
+					},
+					"response": []
+				},
+				{
+					"name": "update wallet",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/auth/updateWallet"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "country",
+			"item": [
+				{
+					"name": "add country",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTY5OTE0MjgsImV4cCI6MTcxNjk5NTAyOCwibmJmIjoxNzE2OTkxNDI4LCJqdGkiOiJTb3Y2MnloNUdZMG5WcUhhIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.KM4cC5QJKRY3NoVmmMYx9g8CSa9stNsfThWQYc_vmxA"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "syriaaaaa"
+								},
+								{
+									"key": "description",
+									"value": "first added"
+								},
+								{
+									"key": "imgs[]",
+									"type": "file",
+									"src": "/C:/Users/homam/Pictures/New folder/cowboy-silhouette-4096x2304-16068.jpeg"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/country/addCountry"
+					},
+					"response": []
+				},
+				{
+					"name": "update country",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "syria"
+								},
+								{
+									"key": "description",
+									"value": "first added"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/country/updateCountry/1"
+					},
+					"response": []
+				},
+				{
+					"name": "search name country",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/country/searchCountry/sy"
+					},
+					"response": []
+				},
+				{
+					"name": "delete country",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/country/deleteCountry/4"
+					},
+					"response": []
+				},
+				{
+					"name": "get country",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/country/getCountry/1"
+					},
+					"response": []
+				},
+				{
+					"name": "get all countries",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/country/getAllCountries"
+					},
+					"response": []
+				},
+				{
+					"name": "update photo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "imgs[]",
+									"type": "file",
+									"src": "/C:/Users/homam/Pictures/New folder/camp-nou-4565352_1280.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/country/updatePhoto/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"country",
+								"updatePhoto",
+								"1"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "City",
+			"item": [
+				{
+					"name": "add city",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "damascussss"
+								},
+								{
+									"key": "description",
+									"value": "first added"
+								},
+								{
+									"key": "country_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "imgs[]",
+									"type": "file",
+									"src": "/C:/Users/homam/Pictures/New folder/cowboy-silhouette-4096x2304-16068.jpeg"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/city/addCity"
+					},
+					"response": []
+				},
+				{
+					"name": "update city",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "74",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "first added",
+									"disabled": true
+								},
+								{
+									"key": "country_id",
+									"value": "3\n"
+								},
+								{
+									"key": "",
+									"value": null,
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/city/updateCity/5"
+					},
+					"response": []
+				},
+				{
+					"name": "search name city",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/city/searchCity/da"
+					},
+					"response": []
+				},
+				{
+					"name": "delete city",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/city/deleteCity/3"
+					},
+					"response": []
+				},
+				{
+					"name": "get city",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/city/getCity/4"
+					},
+					"response": []
+				},
+				{
+					"name": "get all city",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/city/getAllCities"
+					},
+					"response": []
+				},
+				{
+					"name": "update photo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "imgs[]",
+									"type": "file",
+									"src": "/C:/Users/homam/Pictures/New folder/camp-nou-4565352_1280.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/city/updatePhoto/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"city",
+								"updatePhoto",
+								"1"
+							],
+							"query": [
+								{
+									"key": "imgs[]",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Facility",
+			"item": [
+				{
+					"name": "add facility",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "cc"
+								},
+								{
+									"key": "description",
+									"value": "first added"
+								},
+								{
+									"key": "city_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "imgs[]",
+									"type": "file",
+									"src": "/C:/Users/homam/Pictures/New folder/cowboy-silhouette-4096x2304-16068.jpeg"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/facility/addFacility"
+					},
+					"response": []
+				},
+				{
+					"name": "update facility",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTczNDM5MDksImV4cCI6MTcxNzM0NzUwOSwibmJmIjoxNzE3MzQzOTA5LCJqdGkiOiJ6ak9SQlFRRXV6Z05QSklsIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.TgBl9g4D-I2JMhhAPD2QeBS4AuH1rwO3ZQ_fVc7ZQUs"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "ccsaasqjsd"
+								},
+								{
+									"key": "description",
+									"value": "first added"
+								},
+								{
+									"key": "city_id",
+									"value": "1\n",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/facility/updateFacility/1"
+					},
+					"response": []
+				},
+				{
+					"name": "delete facility",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/facility/deleteFacility/1"
+					},
+					"response": []
+				},
+				{
+					"name": "search name facility",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/facility/searchFacility/cc"
+					},
+					"response": []
+				},
+				{
+					"name": "get facility",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/facility/getFacility/2"
+					},
+					"response": []
+				},
+				{
+					"name": "get all facility",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/facility/getAllFacility"
+					},
+					"response": []
+				},
+				{
+					"name": "facility by city",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/facility/getFacilityByCity/2"
+					},
+					"response": []
+				},
+				{
+					"name": "update photo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "imgs[]",
+									"type": "file",
+									"src": "/C:/Users/homam/Pictures/New folder/cowboy-silhouette-4096x2304-16068.jpeg"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/facility/updatePhoto/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Hotel",
+			"item": [
+				{
+					"name": "add hotel",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "ss",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "as",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "2000",
+									"type": "text"
+								},
+								{
+									"key": "availability",
+									"value": "50",
+									"type": "text"
+								},
+								{
+									"key": "city_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "imgs[]",
+									"type": "file",
+									"src": "/C:/Users/homam/Pictures/New folder/cowboy-silhouette-4096x2304-16068.jpeg"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/hotel/addHotel"
+					},
+					"response": []
+				},
+				{
+					"name": "update hotel",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "ss",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "as",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "price",
+									"value": "2000",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "availability",
+									"value": "50",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "city_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/hotel/updateHotel/1"
+					},
+					"response": []
+				},
+				{
+					"name": "delete hotel",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/hotel/deleteHotel/1"
+					},
+					"response": []
+				},
+				{
+					"name": "search hotel",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/hotel/searchHotel/ss"
+					},
+					"response": []
+				},
+				{
+					"name": "get hotel",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/hotel/getHotel/4"
+					},
+					"response": []
+				},
+				{
+					"name": "get all hotels",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/hotel/getAllHotel?",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"hotel",
+								"getAllHotel"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "hotel by city",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/hotel/getHotelByCity/2"
+					},
+					"response": []
+				},
+				{
+					"name": "update photo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "imgs[]",
+									"type": "file",
+									"src": "/C:/Users/homam/Pictures/New folder/cowboy-silhouette-4096x2304-16068.jpeg"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/hotel/updatePhoto/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Restaurant",
+			"item": [
+				{
+					"name": "add restaurant",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "ss",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "as",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "2000",
+									"type": "text"
+								},
+								{
+									"key": "food_type",
+									"value": "50",
+									"type": "text"
+								},
+								{
+									"key": "city_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "imgs[]",
+									"type": "file",
+									"src": "/C:/Users/homam/Pictures/New folder/cowboy-silhouette-4096x2304-16068.jpeg"
+								},
+								{
+									"key": "imgs[]",
+									"type": "file",
+									"src": "/C:/Users/homam/Pictures/New folder/cowboy-silhouette-4096x2304-16068.jpeg"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/restaurant/addRestaurant"
+					},
+					"response": []
+				},
+				{
+					"name": "update restaurant",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "ssdd",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "as",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "2050",
+									"type": "text"
+								},
+								{
+									"key": "food_type",
+									"value": "50",
+									"type": "text"
+								},
+								{
+									"key": "city_id",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/restaurant/updateRestaurant/1"
+					},
+					"response": []
+				},
+				{
+					"name": "delete restaurant",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/restaurant/deleteRestaurant/1"
+					},
+					"response": []
+				},
+				{
+					"name": "search restaurant",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/restaurant/searchRestaurant/ss"
+					},
+					"response": []
+				},
+				{
+					"name": "get restaurant",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/restaurant/getRestaurant/2"
+					},
+					"response": []
+				},
+				{
+					"name": "get all restaurants",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/restaurant/getAllRestaurant"
+					},
+					"response": []
+				},
+				{
+					"name": "restaurant by city",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/restaurant/getRestaurantByCity/1"
+					},
+					"response": []
+				},
+				{
+					"name": "update photo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "imgs[]",
+									"type": "file",
+									"src": "/C:/Users/homam/Pictures/New folder/cowboy-silhouette-4096x2304-16068.jpeg"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/restaurant/updatePhoto/2"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Company",
+			"item": [
+				{
+					"name": "add company",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "ss",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "sss",
+									"type": "text"
+								},
+								{
+									"key": "transport_type",
+									"value": "sss",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "1000",
+									"type": "text"
+								},
+								{
+									"key": "imgs[]",
+									"type": "file",
+									"src": "/C:/Users/homam/Pictures/New folder/cowboy-silhouette-4096x2304-16068.jpeg"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/company/addCompany"
+					},
+					"response": []
+				},
+				{
+					"name": "update company",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "sSs",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "sss",
+									"type": "text"
+								},
+								{
+									"key": "transport_type",
+									"value": "sss",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "1000",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/company/updateCompany/1"
+					},
+					"response": []
+				},
+				{
+					"name": "delete company",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/company/deleteCity/3"
+					},
+					"response": []
+				},
+				{
+					"name": "search company",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/company/searchCompany/1"
+					},
+					"response": []
+				},
+				{
+					"name": "get company",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/company/getCompany/2"
+					},
+					"response": []
+				},
+				{
+					"name": "get all companies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/company/getAllCompany"
+					},
+					"response": []
+				},
+				{
+					"name": "update photo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/company/updatePhoto?imgs[]",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"company",
+								"updatePhoto"
+							],
+							"query": [
+								{
+									"key": "imgs[]",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Trip",
+			"item": [
+				{
+					"name": "add trip",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "sad",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "sda",
+									"type": "text"
+								},
+								{
+									"key": "cost",
+									"value": "15",
+									"type": "text"
+								},
+								{
+									"key": "starting_date",
+									"value": "24-12-2024",
+									"type": "text"
+								},
+								{
+									"key": "ending_date",
+									"value": "25-12-2024",
+									"type": "text"
+								},
+								{
+									"key": "imgs[]",
+									"type": "file",
+									"src": "/C:/Users/homam/Pictures/Screenshots/Screenshot 2024-05-28 201039.png"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/trip/addTrip"
+					},
+					"response": []
+				},
+				{
+					"name": "update trip",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/trip/updateTrip/1"
+					},
+					"response": []
+				},
+				{
+					"name": "delete trip",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTkzMjQwNjQsImV4cCI6MTcxOTMyNzY2NCwibmJmIjoxNzE5MzI0MDY0LCJqdGkiOiJkbEd0a3kwZG9reXBMMG10Iiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.LyfEp_-fYAYJQ2hKe5vZWTkxakXce8sWT8rlWpfytUA"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/trip/deleteTrip/1"
+					},
+					"response": []
+				},
+				{
+					"name": "get trip",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTkzMjQwNjQsImV4cCI6MTcxOTMyNzY2NCwibmJmIjoxNzE5MzI0MDY0LCJqdGkiOiJkbEd0a3kwZG9reXBMMG10Iiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.LyfEp_-fYAYJQ2hKe5vZWTkxakXce8sWT8rlWpfytUA"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/trip/getTrip/2"
+					},
+					"response": []
+				},
+				{
+					"name": "get all trips",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTkzMzQwMTcsImV4cCI6MTcxOTMzNzYxNywibmJmIjoxNzE5MzM0MDE3LCJqdGkiOiJIS1NrMmMxNG9HSG1qSVFFIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.D7XtwOorbBw8lyVyWeIkHgsuOUonXPRfMMfr96QrSek"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/trip/getAllTrips"
+					},
+					"response": []
+				},
+				{
+					"name": "update photo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTkzMzQwMTcsImV4cCI6MTcxOTMzNzYxNywibmJmIjoxNzE5MzM0MDE3LCJqdGkiOiJIS1NrMmMxNG9HSG1qSVFFIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.D7XtwOorbBw8lyVyWeIkHgsuOUonXPRfMMfr96QrSek"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "imgs[]",
+									"type": "file",
+									"src": "/C:/Users/homam/Pictures/New folder/camp-nou-4565352_1280.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/trip/updatePhoto/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"trip",
+								"updatePhoto",
+								"2"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "trips admin",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "trips user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTkzMzUxMzcsImV4cCI6MTcxOTMzODczNywibmJmIjoxNzE5MzM1MTM3LCJqdGkiOiJLTTZzOGNSUHppOGg4dDV1Iiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7-ZvEe9_zekYHmGGlR39RhvrbH1qD9HGFy870XFvmXo"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/trip/getUserTrips"
+					},
+					"response": []
+				},
+				{
+					"name": "update photo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MjM0NjI4MTQsImV4cCI6MTcyMzQ2NjQxNCwibmJmIjoxNzIzNDYyODE0LCJqdGkiOiJtY0RhcVJ5TkY3TWpObDh5Iiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Y349K389nHFN06LCFVzEVREEEixM5mpPyEOm9l78za8"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "imgs[]",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/trip/updatePhoto"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Activity",
+			"item": [
+				{
+					"name": "add activity",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvcmVnaXN0ZXIiLCJpYXQiOjE3MTk5OTQ1OTAsImV4cCI6MTcxOTk5ODE5MCwibmJmIjoxNzE5OTk0NTkwLCJqdGkiOiJoZ2xVdHdxVHRKRlR4SThpIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.FmGlUUVNqW6AkZvQl4dVGVarAQMeU-kQ2yXYDue-SBk"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "trip_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "restaurant_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "hotel_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "transport_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "facility_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/activity/addActivity"
+					},
+					"response": []
+				},
+				{
+					"name": "update activity",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MjAwODM1NTksImV4cCI6MTcyMDA4NzE1OSwibmJmIjoxNzIwMDgzNTU5LCJqdGkiOiJWQmFseUQ0cENUM25HZ1JpIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Q26X9TGh-RxZWC5xbjqkPmPLy3RteMS6WCcxptnJ8PE"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "trip_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "restaurant_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "hotel_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "transport_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "facility_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "facility_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/activity/updateActivity/1"
+					},
+					"response": []
+				},
+				{
+					"name": "delete activity",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MjAwODM1NTksImV4cCI6MTcyMDA4NzE1OSwibmJmIjoxNzIwMDgzNTU5LCJqdGkiOiJWQmFseUQ0cENUM25HZ1JpIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Q26X9TGh-RxZWC5xbjqkPmPLy3RteMS6WCcxptnJ8PE"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/activity/deleteActivity/6"
+					},
+					"response": []
+				},
+				{
+					"name": "get activity",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MjAwODM1NTksImV4cCI6MTcyMDA4NzE1OSwibmJmIjoxNzIwMDgzNTU5LCJqdGkiOiJWQmFseUQ0cENUM25HZ1JpIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Q26X9TGh-RxZWC5xbjqkPmPLy3RteMS6WCcxptnJ8PE"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/activity/getActivity/1"
+					},
+					"response": []
+				},
+				{
+					"name": "get trip activity",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MjAwODM1NTksImV4cCI6MTcyMDA4NzE1OSwibmJmIjoxNzIwMDgzNTU5LCJqdGkiOiJWQmFseUQ0cENUM25HZ1JpIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Q26X9TGh-RxZWC5xbjqkPmPLy3RteMS6WCcxptnJ8PE"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/activity/getTripActivity/3"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Book",
+			"item": [
+				{
+					"name": "add book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvcmVnaXN0ZXIiLCJpYXQiOjE3MjIyNTU5ODAsImV4cCI6MTcyMjI1OTU4MCwibmJmIjoxNzIyMjU1OTgwLCJqdGkiOiJMMXE5WGNEWFBndXh0OGRMIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.W_G1c-pPbK4WnjV6K7ZpjbFSPKyJB6VgH03zfqLmqWU"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "trip_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "person_number",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/booking/book"
+					},
+					"response": []
+				},
+				{
+					"name": "delete book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvcmVnaXN0ZXIiLCJpYXQiOjE3MjIyNTU5ODAsImV4cCI6MTcyMjI1OTU4MCwibmJmIjoxNzIyMjU1OTgwLCJqdGkiOiJMMXE5WGNEWFBndXh0OGRMIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.W_G1c-pPbK4WnjV6K7ZpjbFSPKyJB6VgH03zfqLmqWU"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/booking/deleteBook/2"
+					},
+					"response": []
+				},
+				{
+					"name": "update book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MjI1MTUzMDAsImV4cCI6MTcyMjUxODkwMCwibmJmIjoxNzIyNTE1MzAwLCJqdGkiOiJTdHNxWlRrMnc2QVdqUmhaIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.g0bCuFFBs_BPRIkG6hCdsNwP2hiHr_YVOfjtsjjw8sI"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "person_number",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "trip_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/booking/updateBook/4"
+					},
+					"response": []
+				},
+				{
+					"name": "get book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvcmVnaXN0ZXIiLCJpYXQiOjE3MjI1MjA1NTYsImV4cCI6MTcyMjUyNDE1NiwibmJmIjoxNzIyNTIwNTU2LCJqdGkiOiI4VjFLYUczdGV6STNjWWZRIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.P1dw2NIK3sXwcR6fPIS37THlwIQQ_GiP1cXx5y5FIsc"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/booking/getUserBook/1"
+					},
+					"response": []
+				},
+				{
+					"name": "get all user booking",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvcmVnaXN0ZXIiLCJpYXQiOjE3MjI1MjIxNjUsImV4cCI6MTcyMjUyNTc2NSwibmJmIjoxNzIyNTIyMTY1LCJqdGkiOiJuT3FyZ3lFUHYyTzJIVENSIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.bDof7MsbqDGcIhrTo-QkbRZlkAJfei-_Hs41uvbcJoU"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/booking/getAllUserBookings"
+					},
+					"response": []
+				},
+				{
+					"name": "get Trip Book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MjM0NjkxNTksImV4cCI6MTcyMzQ3Mjc1OSwibmJmIjoxNzIzNDY5MTU5LCJqdGkiOiJWUWhydnRETUR5WnJQdHoyIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.A5VmoUT7FLaCEn1u-pZ-7n-Pq38Ol-Jnw3sCNt1XzBk"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": "http://127.0.0.1:8000/api/booking/getTripBook/2"
+					},
+					"response": []
+				},
+				{
+					"name": "get user finance",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MjI2MTA1MDYsImV4cCI6MTcyMjYxNDEwNiwibmJmIjoxNzIyNjEwNTA2LCJqdGkiOiJyM0RxTlpEQXpxU25hT0JIIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.8zEwuuFyC4maRhZimTkcv3F3WQQT08l8FNoSv4XB6TY"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/booking/getUserFinance"
+					},
+					"response": []
+				},
+				{
+					"name": "view user finance",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MjI2MTA1MDYsImV4cCI6MTcyMjYxNDEwNiwibmJmIjoxNzIyNjEwNTA2LCJqdGkiOiJyM0RxTlpEQXpxU25hT0JIIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.8zEwuuFyC4maRhZimTkcv3F3WQQT08l8FNoSv4XB6TY"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/booking/viewUserFinance\\2"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://127.0.0.1:8000",
+			"type": "string"
+		}
+	]
+}
